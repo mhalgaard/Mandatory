@@ -1,0 +1,128 @@
+* {
+    font-family: "Century Gothic";
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #fff;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.65;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#title {
+    max-width: 100%;
+    text-align: center;
+    background-image: url("images/OldMovies-windows10Wallpaper.jpg");
+    height: 250px;
+    position: relative;
+}
+
+#title h1 {
+    padding: 0 15px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+#title img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+header {
+    background-color: #343434;
+}
+
+footer {
+    background-color: #343434;
+}
+
+#movieContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie {
+    width: 100%;
+    text-align:center;
+    max-width:980px;
+    padding:15px;
+    margin:0 auto;
+}
+
+.movie .movieTitle {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+.movie img {
+    object-fit: cover;
+    max-height:390px;
+}
+
+.movie .description {
+    text-align: center;
+    font-size: 16px;
+}
+
+.movie p {
+    padding-bottom:15px;
+}
+
+footer p {
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.hide {
+    display:none;
+}
+
+.show {
+    display:block;
+}
+
+.media {
+    padding-top:15px;
+}
+
+.media > * {
+    display:inline-block;
+}
+
+.media iframe {
+    max-width:80%;
+}
+
+#movieContainer li {
+    width:100%;
+    background-color:#e3e3e3;
+}
+
+@media screen and (max-width:899px) {
+    #movieContainer li:nth-child(odd) {
+        background-color:#fff;
+    }
+}
+
+@media screen and (min-width:900px) {
+    #movieContainer li {
+        width:50%;
+    }
+
+    #movieContainer li:nth-child(1), #movieContainer li:nth-child(4), #movieContainer li:nth-child(5) {
+        background-color:#fff;
+    }
+}
