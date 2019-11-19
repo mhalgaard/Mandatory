@@ -25,7 +25,7 @@ let container = document.getElementById("movieContainer");
 
 // For loop til at loope igennem alle video titles, og oprette elementer for hvert movie objekt
 for (let i = 0; i < moviesJson.movies.length; i++) {
-    // Sammensætning af OMDB Apir URL og titlen fra eget JSON,
+    // Sammensætning af OMDB API URL og titlen fra eget JSON,
     // mellemrum erstattes med %20 for at sikre korrekt data sendes tilbage
     let fetchUrl = url + moviesJson.movies[i].title.replace(/( )/g, "%20");
     fetch(fetchUrl)
@@ -70,7 +70,7 @@ for (let i = 0; i < moviesJson.movies.length; i++) {
             let ageInYears = year - data.Year;
             // IF statement for at udregne hvor mange år siden det var, før filmen udkom
             // hvis filmen udkom i det nuværende år, indsættes en anden værdi.
-            if (year != data.Year) {
+            if (year !== data.Year) {
                 age.innerHTML = "Released in " + data.Year + " (" + ageInYears + " years ago)";
             } else {
                 age.innerHTML = data.Year + " (Released this year)";
@@ -118,7 +118,7 @@ function onYouTubeIframeAPIReady() {
 var done = false;
 
 function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
+    if (event.data === YT.PlayerState.PLAYING && !done) {
         setTimeout(stopVideo, 6000);
         done = true;
     }
